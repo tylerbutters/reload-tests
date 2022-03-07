@@ -27,33 +27,26 @@ onready var swap_anim = $MagSwap
 onready var insert_anim = $InsertMag
 onready var reset_anim = $Reset
 
-func grab_mag():
+func grab_mag_from_vest():
 	if !mag_in_hand:
-		grab_anim.play("grab_mag")
+		grab_anim.play("mag_1")
 		yield(grab_anim, "animation_finished")
 		mag_in_hand = true
-	if !mag_in_gun:
-		insert_anim.play("insert_mag")
-		yield(insert_anim, "animation_finished")
-		reset_anim.play("reset")
-		mag_in_hand = false
-		mag_in_gun = true
-	#load_mag()
 
-func release():
-	if mag_in_gun and !mag_in_hand:
+func release_mag_from_gun():
+	if mag_in_gun:
 		release_anim.play("mag_release")
 		yield(release_anim, "animation_finished")
 		mag_in_gun = false
+	
+func insert_mag_in_gun():
+	if !mag_in_gun and mag_in_hand:
+		insert_anim.play("insert_mag")
+		yield(release_anim, "animation_finished")
 	elif mag_in_gun and mag_in_hand:
 		swap_anim.play("swap_mag")
-		yield(swap_anim, "animation_finished")
-		reset_anim.play("reset")
-		mag_in_gun = true
-		mag_in_hand = false
-	
-
-
+		yield(release_anim, "animation_finished")
+	mag_in_gun = true
 		
 func _ready():
 	#hides the cursor
@@ -69,12 +62,14 @@ func _input(event):
 func _process(delta):
 	
 	if Input.is_action_just_pressed("mag_release"):
-		#release(mag_in_gun)
-		release()
-	elif Input.is_action_just_pressed("grab_mag"):
-		#insert_or_swap_mags(true)
-		grab_mag()
-	
+		release_mag_from_gun()
+		
+	if Input.is_action_just_pressed("mag_1"):
+		grab_mag_from_vest()
+		
+	if Input.is_action_just_pressed("insert"):
+		insert_mag_in_gun()
+		
 	if Input.is_action_just_pressed("play"):
 		grab_anim.play("grab_mag")
 		yield(grab_anim, "animation_finished")
