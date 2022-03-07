@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://grid_textures/PNG/Orange/texture_02.png" type="Texture" id=2]
@@ -89,6 +89,30 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector3( 0, -90, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Body/Mag3:translation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Body/Mag3:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 67.421, 0 ) ]
+}
 
 [sub_resource type="Animation" id=17]
 resource_name = "mag_1"
@@ -146,10 +170,38 @@ tracks/1/keys = {
 "values": [ Vector3( 0, -90, 0 ), Vector3( 0, -90, 0 ), Vector3( 0, -23.622, 180 ) ]
 }
 
+[sub_resource type="Animation" id=25]
+resource_name = "mag_3"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Body/Mag3:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.285536, 0.905573, -0.36581 ), Vector3( 0.286, 1.497, -0.366 ), Vector3( -0.741, 1.497, -0.67 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Body/Mag3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 67.421, 0 ), Vector3( 0, 67.421, 0 ), Vector3( 0, -23.622, 180 ) ]
+}
+
 [sub_resource type="Animation" id=14]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Body/Magingin:translation")
+tracks/0/path = NodePath("Body/Mag4:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -161,7 +213,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Body/Magingin:rotation_degrees")
+tracks/1/path = NodePath("Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -177,7 +229,7 @@ tracks/1/keys = {
 resource_name = "mag_release"
 length = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("Body/Magingin:translation")
+tracks/0/path = NodePath("Body/Mag4:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -189,7 +241,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0.514848, 1.44283, -1.13521 ), Vector3( 0.515, -2, -1.135 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Body/Magingin:rotation_degrees")
+tracks/1/path = NodePath("Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -204,7 +256,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=20]
 length = 3.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Magingin:translation")
+tracks/0/path = NodePath("../Body/Mag4:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -216,7 +268,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Body/Magingin:rotation_degrees")
+tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -256,7 +308,7 @@ tracks/3/keys = {
 resource_name = "swap_mag"
 length = 2.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Magingin:translation")
+tracks/0/path = NodePath("../Body/Mag4:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -268,7 +320,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0.514848, 1.44283, -1.13521 ), Vector3( 0.514848, 1.44283, -1.13521 ), Vector3( 0.514848, 1.26013, -1.13521 ), Vector3( 0.654459, 1.26013, -1.13521 ), Vector3( 0.654459, 1.58604, -1.13521 ), Vector3( 0.345294, 1.21135, -0.875771 ), Vector3( 0.0170638, 0.755502, -0.535787 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Body/Magingin:rotation_degrees")
+tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -307,7 +359,7 @@ tracks/3/keys = {
 [sub_resource type="Animation" id=18]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Magingin:translation")
+tracks/0/path = NodePath("../Body/Mag4:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -342,11 +394,71 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector3( 0, -180, 0 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Body/Mag4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Body/Mag2:translation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Body/Mag2:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -90, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Body/Mag3:translation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Body/Mag3:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 67.421, 0 ) ]
+}
 
 [sub_resource type="Animation" id=19]
 resource_name = "insert_mag"
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Magingin:translation")
+tracks/0/path = NodePath("../Body/Mag4:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -381,11 +493,161 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector3( 0, -90, 0 ), Vector3( 0, -180, 0 ), Vector3( 0, -180, 0 ), Vector3( 0, -180, 0 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Body/Mag2:translation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Body/Mag2:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -90, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Body/Mag3:translation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Body/Mag3:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 67.421, 0 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "insert_mag_2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Body/Mag4:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.515, -2, -1.135 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Body/Mag1:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.279, 0.906, -0.38 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Body/Mag1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -67.421, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Body/Mag3:translation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Body/Mag3:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 67.421, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Body/Mag2:translation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.741, 1.497, -0.67 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Body/Mag2:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -23.622, 180 ), Vector3( 0, 0, 180 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "insert_mag_3"
 
 [sub_resource type="Animation" id=22]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Magingin:translation")
+tracks/0/path = NodePath("../Body/Mag4:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -397,7 +659,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Body/Magingin:rotation_degrees")
+tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -481,11 +743,110 @@ tracks/7/keys = {
 "values": [ Vector3( 0, 67.421, 0 ) ]
 }
 
-[sub_resource type="Animation" id=23]
-resource_name = "reset"
+[sub_resource type="Animation" id=29]
+resource_name = "reset_all"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Body/Mag1:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.279, 0.906, -0.38 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -67.421, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Body/Mag2:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Body/Mag2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -90, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Body/Mag3:translation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Body/Mag3:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 67.421, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Body/Mag4:translation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Body/Mag4:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "reset_gun_mag"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Magingin:translation")
+tracks/0/path = NodePath("../Body/Mag4:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -497,7 +858,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Body/Magingin:rotation_degrees")
+tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -508,8 +869,36 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ) ]
 }
+
+[sub_resource type="Animation" id=23]
+resource_name = "reset_vest"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Body/Mag1:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.279, 0.906, -0.38 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -67.421, 0 ) ]
+}
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Body/Mag1:translation")
+tracks/2/path = NodePath("../Body/Mag2:translation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -518,10 +907,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector3( -0.279, 0.906, -0.38 ) ]
+"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Body/Mag1:rotation_degrees")
+tracks/3/path = NodePath("../Body/Mag2:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -530,10 +919,10 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector3( 0, -67.421, 0 ) ]
+"values": [ Vector3( 0, -90, 0 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Body/Mag2:translation")
+tracks/4/path = NodePath("../Body/Mag3:translation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -542,39 +931,15 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../Body/Mag2:rotation_degrees")
+tracks/5/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0, -90, 0 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("../Body/Mag3:translation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("../Body/Mag3:rotation_degrees")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -601,7 +966,7 @@ transform = Transform( 0.125108, 0, 0, 0, 0.708503, -9.37161e-08, 0, -9.37161e-0
 mesh = SubResource( 5 )
 material/0 = null
 
-[node name="Magingin" type="MeshInstance" parent="Body"]
+[node name="Mag4" type="MeshInstance" parent="Body"]
 transform = Transform( 0.0650208, 0, 0, 0, 0.301997, 0, 0, 0, 0.123333, 0.514848, 1.44283, -1.13521 )
 mesh = SubResource( 13 )
 material/0 = null
@@ -641,6 +1006,7 @@ root_node = NodePath("../MagSwap")
 anims/RESET = SubResource( 16 )
 anims/mag_1 = SubResource( 17 )
 anims/mag_2 = SubResource( 24 )
+anims/mag_3 = SubResource( 25 )
 
 [node name="MagRelease" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 14 )
@@ -655,8 +1021,12 @@ anims/swap_mag = SubResource( 21 )
 root_node = NodePath("../GrabMag")
 anims/RESET = SubResource( 18 )
 anims/insert_mag = SubResource( 19 )
+anims/insert_mag_2 = SubResource( 27 )
+anims/insert_mag_3 = SubResource( 28 )
 
 [node name="Reset" type="AnimationPlayer" parent="."]
 root_node = NodePath("../InsertMag")
 anims/RESET = SubResource( 22 )
-anims/reset = SubResource( 23 )
+anims/reset_all = SubResource( 29 )
+anims/reset_gun_mag = SubResource( 26 )
+anims/reset_vest = SubResource( 23 )
