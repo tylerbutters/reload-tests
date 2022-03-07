@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://grid_textures/PNG/Dark/texture_03.png" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_world_triplanar = true
+albedo_texture = ExtResource( 2 )
+uv1_triplanar = true
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_world_triplanar = true
+albedo_texture = ExtResource( 2 )
+uv1_triplanar = true
+
+[node name="World" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+use_collision = true
+
+[node name="CSGBox2" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 20, 0, 0, 0, 2, 0, 0, 0, 20, 0, 0, 0 )
+material = SubResource( 1 )
+
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner/CSGBox2"]
+transform = Transform( 0.85, 0, 0, 0, 0.5, 0, 0, 0, 0.85, 0, 0.554796, 0 )
+operation = 2
+height = 2.53984
+material = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.608081, 0.515587, -0.603661, -0.104426, 0.80574, 0.582991, 0.786977, -0.291468, 0.543796, -2.27827, 12.4458, 5.41299 )
+shadow_enabled = true
