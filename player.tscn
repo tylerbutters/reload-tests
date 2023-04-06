@@ -1,1032 +1,1050 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=34 format=3 uid="uid://k3wr4geoleb7"]
 
-[ext_resource path="res://player.gd" type="Script" id=1]
-[ext_resource path="res://grid_textures/PNG/Orange/texture_02.png" type="Texture" id=2]
-[ext_resource path="res://grid_textures/PNG/Red/texture_02.png" type="Texture" id=3]
+[ext_resource type="Script" path="res://player.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bsp41y1dapudg" path="res://grid_textures/PNG/Orange/texture_02.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c8hikpsuab6ck" path="res://grid_textures/PNG/Red/texture_02.png" id="3"]
 
-[sub_resource type="CylinderShape" id=6]
-radius = 0.5
+[sub_resource type="StandardMaterial3D" id="12"]
+albedo_texture = ExtResource("2")
+uv1_triplanar = true
+
+[sub_resource type="SphereMesh" id="3"]
+material = SubResource("12")
+
+[sub_resource type="StandardMaterial3D" id="10"]
+
+[sub_resource type="BoxMesh" id="4"]
+material = SubResource("10")
+
+[sub_resource type="CylinderShape3D" id="6"]
 height = 3.0
 
-[sub_resource type="CapsuleMesh" id=2]
-radius = 0.5
-mid_height = 2.0
+[sub_resource type="CapsuleMesh" id="2"]
 
-[sub_resource type="SpatialMaterial" id=7]
-albedo_texture = ExtResource( 2 )
+[sub_resource type="StandardMaterial3D" id="11"]
+albedo_texture = ExtResource("3")
 uv1_triplanar = true
 
-[sub_resource type="SpatialMaterial" id=11]
-albedo_texture = ExtResource( 3 )
-uv1_triplanar = true
+[sub_resource type="BoxMesh" id="5"]
+material = SubResource("11")
 
-[sub_resource type="CubeMesh" id=5]
-material = SubResource( 11 )
+[sub_resource type="BoxMesh" id="13"]
 
-[sub_resource type="CubeMesh" id=13]
-
-[sub_resource type="SpatialMaterial" id=12]
-albedo_texture = ExtResource( 2 )
-uv1_triplanar = true
-
-[sub_resource type="SphereMesh" id=3]
-material = SubResource( 12 )
-radius = 0.5
-height = 1.0
-
-[sub_resource type="SpatialMaterial" id=10]
-
-[sub_resource type="CubeMesh" id=4]
-material = SubResource( 10 )
-
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id="16"]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag1:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.0423286, 0.905573, -0.490288 ) ]
+"values": [Vector3(0.0423286, 0.905573, -0.490288)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -67.421, 0 ) ]
+"values": [Vector3(0, -67.421, 0)]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Body/Mag2:translation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
+tracks/2/path = NodePath("../Body/Mag2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+"values": [Vector3(0.000920836, 0.905573, -0.440919)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../Body/Mag2:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ) ]
+"values": [Vector3(0, -90, 0)]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Body/Mag3:translation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
+tracks/4/path = NodePath("../Body/Mag3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+"values": [Vector3(0.285536, 0.905573, -0.36581)]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 67.421, 0 ) ]
+"values": [Vector3(0, 67.421, 0)]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id="17"]
 resource_name = "mag_1"
 length = 0.6
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag1:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ Vector3( -0.278873, 0.906, -0.380082 ), Vector3( -0.278873, 1.49721, -0.380082 ), Vector3( -0.741, 1.497, -0.67 ) ]
+"values": [Vector3(-0.278873, 0.906, -0.380082), Vector3(-0.278873, 1.49721, -0.380082), Vector3(-0.741, 1.497, -0.67)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0, -67.421, 0 ), Vector3( 0, -67.421, 0 ), Vector3( 0, -23.622, 180 ) ]
+"values": [Vector3(0, -67.421, 0), Vector3(0, -67.421, 0), Vector3(0, -23.622, 180)]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id="24"]
 resource_name = "mag_2"
 length = 0.6
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag2:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ), Vector3( 0.001, 1.497, -0.441 ), Vector3( -0.741, 1.497, -0.67 ) ]
+"values": [Vector3(0.000920836, 0.905573, -0.440919), Vector3(0.001, 1.497, -0.441), Vector3(-0.741, 1.497, -0.67)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag2:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ), Vector3( 0, -90, 0 ), Vector3( 0, -23.622, 180 ) ]
+"values": [Vector3(0, -90, 0), Vector3(0, -90, 0), Vector3(0, -23.622, 180)]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id="25"]
 resource_name = "mag_3"
 length = 0.6
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag3:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0.285536, 0.905573, -0.36581 ), Vector3( 0.286, 1.497, -0.366 ), Vector3( -0.741, 1.497, -0.67 ) ]
+"values": [Vector3(0.285536, 0.905573, -0.36581), Vector3(0.286, 1.497, -0.366), Vector3(-0.741, 1.497, -0.67)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0, 67.421, 0 ), Vector3( 0, 67.421, 0 ), Vector3( 0, -23.622, 180 ) ]
+"values": [Vector3(0, 67.421, 0), Vector3(0, 67.421, 0), Vector3(0, -23.622, 180)]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wwwib"]
+_data = {
+"RESET": SubResource("16"),
+"mag_1": SubResource("17"),
+"mag_2": SubResource("24"),
+"mag_3": SubResource("25")
+}
+
+[sub_resource type="Animation" id="14"]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Body/Mag4:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("Body/Mag4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
+"values": [Vector3(0.514848, 1.44283, -1.13521)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id="15"]
 resource_name = "mag_release"
 length = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("Body/Mag4:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("Body/Mag4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0.514848, 1.44283, -1.13521 ), Vector3( 0.515, -2, -1.135 ) ]
+"values": [Vector3(0.514848, 1.44283, -1.13521), Vector3(0.515, -2, -1.135)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hbeok"]
+_data = {
+"RESET": SubResource("14"),
+"mag_release": SubResource("15")
+}
+
+[sub_resource type="Animation" id="20"]
 length = 3.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag4:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
+"values": [Vector3(0.514848, 1.44283, -1.13521)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Body/Mag1:translation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
+tracks/2/path = NodePath("../Body/Mag1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( -0.918, 1.507, -0.893 ) ]
+"values": [Vector3(-0.918, 1.507, -0.893)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ) ]
+"values": [Vector3(0, -90, 0)]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id="21"]
 resource_name = "swap_mag"
 length = 2.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag4:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1, 1.3, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.5, 0.7, 1, 1.3, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0.514848, 1.44283, -1.13521 ), Vector3( 0.514848, 1.44283, -1.13521 ), Vector3( 0.514848, 1.26013, -1.13521 ), Vector3( 0.654459, 1.26013, -1.13521 ), Vector3( 0.654459, 1.58604, -1.13521 ), Vector3( 0.345294, 1.21135, -0.875771 ), Vector3( 0.0170638, 0.755502, -0.535787 ) ]
+"values": [Vector3(0.514848, 1.44283, -1.13521), Vector3(0.514848, 1.44283, -1.13521), Vector3(0.514848, 1.26013, -1.13521), Vector3(0.654459, 1.26013, -1.13521), Vector3(0.654459, 1.58604, -1.13521), Vector3(0.345294, 1.21135, -0.875771), Vector3(0.0170638, 0.755502, -0.535787)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1, 1.3, 1.6, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.5, 0.7, 1, 1.3, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ), Vector3( 0, 90, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 90, 0), Vector3(0, 90, 0)]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Body/Mag1:translation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
+tracks/2/path = NodePath("../Body/Mag1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5, 0.7, 1, 1.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.7, 1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [ Vector3( -0.918, 1.507, -0.893 ), Vector3( -0.128771, 1.12391, -0.893 ), Vector3( 0.381539, 1.28312, -1.1831 ), Vector3( 0.381068, 1.08581, -1.14645 ), Vector3( 0.515063, 1.08581, -1.14645 ), Vector3( 0.515063, 1.44829, -1.14645 ) ]
+"values": [Vector3(-0.918, 1.507, -0.893), Vector3(-0.128771, 1.12391, -0.893), Vector3(0.381539, 1.28312, -1.1831), Vector3(0.381068, 1.08581, -1.14645), Vector3(0.515063, 1.08581, -1.14645), Vector3(0.515063, 1.44829, -1.14645)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5, 0.7, 1, 1.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.7, 1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ), Vector3( 0, -90, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, -90, 0), Vector3(0, -90, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b5fm4"]
+_data = {
+"RESET": SubResource("20"),
+"swap_mag": SubResource("21")
+}
+
+[sub_resource type="Animation" id="18"]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag4:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.515, -2, -1.135 ) ]
+"values": [Vector3(0.515, -2, -1.135)]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Body/Mag1:translation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath("../Body/Mag1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( -0.918, 1.507, -0.893 ) ]
+"values": [Vector3(-0.918, 1.507, -0.893)]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -180, 0 ) ]
+"values": [Vector3(0, -180, 0)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Body/Mag2:translation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
+tracks/4/path = NodePath("../Body/Mag2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+"values": [Vector3(0.000920836, 0.905573, -0.440919)]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("../Body/Mag2:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ) ]
+"values": [Vector3(0, -90, 0)]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../Body/Mag3:translation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
+tracks/6/path = NodePath("../Body/Mag3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+"values": [Vector3(0.285536, 0.905573, -0.36581)]
 }
 tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 67.421, 0 ) ]
+"values": [Vector3(0, 67.421, 0)]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id="19"]
 resource_name = "insert_mag"
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag4:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.515, -2, -1.135 ) ]
+"values": [Vector3(0.515, -2, -1.135)]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Body/Mag1:translation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath("../Body/Mag1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.3, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ Vector3( -0.918, 1.507, -0.893 ), Vector3( -0.435, 1.101, -0.848 ), Vector3( 0.478903, 1.101, -1.09131 ), Vector3( 0.478903, 1.39103, -1.09131 ) ]
+"values": [Vector3(-0.918, 1.507, -0.893), Vector3(-0.435, 1.101, -0.848), Vector3(0.478903, 1.101, -1.09131), Vector3(0.514848, 1.44283, -1.13521)]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.3, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ), Vector3( 0, -180, 0 ), Vector3( 0, -180, 0 ), Vector3( 0, -180, 0 ) ]
+"values": [Vector3(0, -90, 0), Vector3(0, -180, 0), Vector3(0, -180, 0), Vector3(0, -180, 0)]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Body/Mag2:translation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
+tracks/3/path = NodePath("../Body/Mag2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+"values": [Vector3(0.000920836, 0.905573, -0.440919)]
 }
 tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("../Body/Mag2:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ) ]
+"values": [Vector3(0, -90, 0)]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../Body/Mag3:translation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
+tracks/5/path = NodePath("../Body/Mag3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+"values": [Vector3(0.285536, 0.905573, -0.36581)]
 }
 tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 67.421, 0 ) ]
+"values": [Vector3(0, 67.421, 0)]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id="27"]
 resource_name = "insert_mag_2"
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag4:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.515, -2, -1.135 ) ]
+"values": [Vector3(0.515, -2, -1.135)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Body/Mag1:translation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
+tracks/2/path = NodePath("../Body/Mag1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( -0.279, 0.906, -0.38 ) ]
+"values": [Vector3(-0.279, 0.906, -0.38)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -67.421, 0 ) ]
+"values": [Vector3(0, -67.421, 0)]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Body/Mag3:translation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
+tracks/4/path = NodePath("../Body/Mag3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+"values": [Vector3(0.285536, 0.905573, -0.36581)]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 67.421, 0 ) ]
+"values": [Vector3(0, 67.421, 0)]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../Body/Mag2:translation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
+tracks/6/path = NodePath("../Body/Mag2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( -0.741, 1.497, -0.67 ) ]
+"values": [Vector3(-0.741, 1.497, -0.67)]
 }
 tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/path = NodePath("../Body/Mag2:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, -23.622, 180 ), Vector3( 0, 0, 180 ) ]
+"values": [Vector3(0, -23.622, 180), Vector3(0, 0, 180)]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id="28"]
 resource_name = "insert_mag_3"
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t43vk"]
+_data = {
+"RESET": SubResource("18"),
+"insert_mag": SubResource("19"),
+"insert_mag_2": SubResource("27"),
+"insert_mag_3": SubResource("28")
+}
+
+[sub_resource type="Animation" id="22"]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag4:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
+"values": [Vector3(0.514848, 1.44283, -1.13521)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Body/Mag1:translation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
+tracks/2/path = NodePath("../Body/Mag1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( -0.279, 0.906, -0.38 ) ]
+"values": [Vector3(-0.279, 0.906, -0.38)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -67.421, 0 ) ]
+"values": [Vector3(0, -67.421, 0)]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Body/Mag2:translation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
+tracks/4/path = NodePath("../Body/Mag2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+"values": [Vector3(0.000920836, 0.905573, -0.440919)]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("../Body/Mag2:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ) ]
+"values": [Vector3(0, -90, 0)]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../Body/Mag3:translation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
+tracks/6/path = NodePath("../Body/Mag3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+"values": [Vector3(0.285536, 0.905573, -0.36581)]
 }
 tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 67.421, 0 ) ]
+"values": [Vector3(0, 67.421, 0)]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id="29"]
 resource_name = "reset_all"
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag1:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( -0.279, 0.906, -0.38 ) ]
+"values": [Vector3(-0.279, 0.906, -0.38)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -67.421, 0 ) ]
+"values": [Vector3(0, -67.421, 0)]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Body/Mag2:translation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
+tracks/2/path = NodePath("../Body/Mag2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+"values": [Vector3(0.000920836, 0.905573, -0.440919)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../Body/Mag2:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ) ]
+"values": [Vector3(0, -90, 0)]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Body/Mag3:translation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
+tracks/4/path = NodePath("../Body/Mag3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+"values": [Vector3(0.285536, 0.905573, -0.36581)]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 67.421, 0 ) ]
+"values": [Vector3(0, 67.421, 0)]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../Body/Mag4:translation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
+tracks/6/path = NodePath("../Body/Mag4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
+"values": [Vector3(0.514848, 1.44283, -1.13521)]
 }
 tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id="26"]
 resource_name = "reset_gun_mag"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag4:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.514848, 1.44283, -1.13521 ) ]
+"values": [Vector3(0.514848, 1.44283, -1.13521)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id="23"]
 resource_name = "reset_vest"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Body/Mag1:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( -0.279, 0.906, -0.38 ) ]
+"values": [Vector3(-0.279, 0.906, -0.38)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -67.421, 0 ) ]
+"values": [Vector3(0, -67.421, 0)]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Body/Mag2:translation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
+tracks/2/path = NodePath("../Body/Mag2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.000920836, 0.905573, -0.440919 ) ]
+"values": [Vector3(0.000920836, 0.905573, -0.440919)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../Body/Mag2:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, -90, 0 ) ]
+"values": [Vector3(0, -90, 0)]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Body/Mag3:translation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
+tracks/4/path = NodePath("../Body/Mag3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.285536, 0.905573, -0.36581 ) ]
+"values": [Vector3(0.285536, 0.905573, -0.36581)]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 67.421, 0 ) ]
+"values": [Vector3(0, 67.421, 0)]
 }
 
-[node name="Player" type="KinematicBody"]
-script = ExtResource( 1 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p0040"]
+_data = {
+"RESET": SubResource("22"),
+"reset_all": SubResource("29"),
+"reset_gun_mag": SubResource("26"),
+"reset_vest": SubResource("23")
+}
 
-[node name="Body" type="CollisionShape" parent="."]
-shape = SubResource( 6 )
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1")
 
-[node name="BodyMesh" type="MeshInstance" parent="Body"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-mesh = SubResource( 2 )
-skeleton = NodePath("../..")
-material/0 = SubResource( 7 )
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="Hand" type="Spatial" parent="Body"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.493, 1.724, 0 )
-
-[node name="Gun" type="MeshInstance" parent="Body/Hand"]
-transform = Transform( 0.125108, 0, 0, 0, 0.708503, -9.37161e-08, 0, -9.37161e-08, 0.133279, 0, -0.80931, 1.19209e-07 )
-mesh = SubResource( 5 )
-material/0 = null
-
-[node name="Mag4" type="MeshInstance" parent="Body"]
-transform = Transform( 0.0650208, 0, 0, 0, 0.301997, 0, 0, 0, 0.123333, 0.514848, 1.44283, -1.13521 )
-mesh = SubResource( 13 )
-material/0 = null
-
-[node name="Mag1" type="MeshInstance" parent="Body"]
-transform = Transform( 0.0249652, 0, -0.11388, 0, 0.301997, 0, 0.060037, 0, 0.0473546, -0.279, 0.906, -0.38 )
-mesh = SubResource( 13 )
-material/0 = null
-
-[node name="Mag2" type="MeshInstance" parent="Body"]
-transform = Transform( -2.84215e-09, 0, -0.123333, 0, 0.301997, 0, 0.0650208, 0, -5.39106e-09, 0.000920836, 0.905573, -0.440919 )
-mesh = SubResource( 13 )
-material/0 = null
-
-[node name="Mag3" type="MeshInstance" parent="Body"]
-transform = Transform( 0.0249652, 0, 0.11388, 0, 0.301997, 0, -0.060037, 0, 0.0473546, 0.285536, 0.905573, -0.36581 )
-mesh = SubResource( 13 )
-material/0 = null
-
-[node name="Head" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
-
-[node name="Camera" type="Camera" parent="Head"]
+[node name="Camera3D" type="Camera3D" parent="Head"]
 fov = 90.0
 
-[node name="HeadMesh" type="MeshInstance" parent="Head"]
-mesh = SubResource( 3 )
-material/0 = null
+[node name="HeadMesh" type="MeshInstance3D" parent="Head"]
+mesh = SubResource("3")
 
-[node name="Eyes" type="MeshInstance" parent="Head/HeadMesh"]
-transform = Transform( 0.303167, 0, 0, 0, 0.0824739, 0, 0, 0, 0.399972, -0.0143349, 0.00350499, -0.125835 )
-mesh = SubResource( 4 )
-material/0 = null
+[node name="Eyes" type="MeshInstance3D" parent="Head/HeadMesh"]
+transform = Transform3D(0.303167, 0, 0, 0, 0.0824739, 0, 0, 0, 0.399972, -0.0143349, 0.00350499, -0.125835)
+mesh = SubResource("4")
+
+[node name="Body" type="CollisionShape3D" parent="."]
+shape = SubResource("6")
+
+[node name="BodyMesh" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, -1.55243, 8.74228e-08, 0, -1.35717e-07, -1, 0, -0.0472285, 0.0594971)
+mesh = SubResource("2")
+skeleton = NodePath("../..")
+
+[node name="Hand" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.493, 1.724, 0)
+
+[node name="Gun" type="MeshInstance3D" parent="Body/Hand"]
+transform = Transform3D(0.125108, 0, 0, 0, 0.708503, 1.76293e-08, 0, -9.37161e-08, 0.133279, 0, -0.80931, 1.19209e-07)
+mesh = SubResource("5")
+
+[node name="Mag4" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(0.0650208, 0, 0, 0, 0.301997, 0, 0, 0, 0.123333, 0.515, -2, -1.135)
+mesh = SubResource("13")
+
+[node name="Mag1" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(-0.0650208, 0, 1.07821e-08, 0, 0.301997, 0, -5.6843e-09, 0, -0.123333, -0.918, 1.507, -0.893)
+mesh = SubResource("13")
+
+[node name="Mag2" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(-2.84215e-09, 0, -0.123333, 0, 0.301997, 0, 0.0650208, 0, -5.39106e-09, 0.000920836, 0.905573, -0.440919)
+mesh = SubResource("13")
+
+[node name="Mag3" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(0.0249652, 0, 0.11388, 0, 0.301997, 0, -0.060037, 0, 0.0473547, 0.285536, 0.905573, -0.36581)
+mesh = SubResource("13")
 
 [node name="GrabMag" type="AnimationPlayer" parent="."]
 root_node = NodePath("../MagSwap")
-anims/RESET = SubResource( 16 )
-anims/mag_1 = SubResource( 17 )
-anims/mag_2 = SubResource( 24 )
-anims/mag_3 = SubResource( 25 )
+libraries = {
+"": SubResource("AnimationLibrary_wwwib")
+}
 
 [node name="MagRelease" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 14 )
-anims/mag_release = SubResource( 15 )
+libraries = {
+"": SubResource("AnimationLibrary_hbeok")
+}
 
 [node name="MagSwap" type="AnimationPlayer" parent="."]
 root_node = NodePath("../MagRelease")
-anims/RESET = SubResource( 20 )
-anims/swap_mag = SubResource( 21 )
+libraries = {
+"": SubResource("AnimationLibrary_b5fm4")
+}
 
 [node name="InsertMag" type="AnimationPlayer" parent="."]
 root_node = NodePath("../GrabMag")
-anims/RESET = SubResource( 18 )
-anims/insert_mag = SubResource( 19 )
-anims/insert_mag_2 = SubResource( 27 )
-anims/insert_mag_3 = SubResource( 28 )
+libraries = {
+"": SubResource("AnimationLibrary_t43vk")
+}
 
 [node name="Reset" type="AnimationPlayer" parent="."]
 root_node = NodePath("../InsertMag")
-anims/RESET = SubResource( 22 )
-anims/reset_all = SubResource( 29 )
-anims/reset_gun_mag = SubResource( 26 )
-anims/reset_vest = SubResource( 23 )
+libraries = {
+"": SubResource("AnimationLibrary_p0040")
+}
