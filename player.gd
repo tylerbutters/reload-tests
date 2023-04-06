@@ -145,6 +145,3 @@ func _physics_process(delta):
 	# TODOConverter40 looks that snap in Godot 4.0 is float, not vector like in Godot 3 - previous value `snap`
 	set_up_direction(Vector3.UP)
 	move_and_slide()
-	
-	
-	

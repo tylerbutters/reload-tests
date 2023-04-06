@@ -519,6 +519,34 @@ tracks/7/keys = {
 "values": [Vector3(0, 67.421, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_ukuq2"]
+resource_name = "hold_mag"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Mag1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.918, 1.507, -0.893), Vector3(-0.128771, 1.12391, -0.893), Vector3(0.381539, 1.28312, -1.1831)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -90, 0), Vector3(0, -90, 0), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="19"]
 resource_name = "insert_mag"
 tracks/0/type = "value"
@@ -707,34 +735,6 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id="28"]
 resource_name = "insert_mag_3"
-
-[sub_resource type="Animation" id="Animation_ukuq2"]
-resource_name = "hold_mag"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Body/Mag1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(-0.918, 1.507, -0.893), Vector3(-0.128771, 1.12391, -0.893), Vector3(0.381539, 1.28312, -1.1831)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -90, 0), Vector3(0, -90, 0), Vector3(0, 0, 0)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t43vk"]
 _data = {
@@ -1087,11 +1087,11 @@ transform = Transform3D(0.125108, 0, 0, 0, 0.708503, 1.76293e-08, 0, -9.37161e-0
 mesh = SubResource("5")
 
 [node name="Mag4" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(0.0650208, 0, 0, 0, 0.301997, 0, 0, 0, 0.123333, 0.515, -2, -1.135)
+transform = Transform3D(0.0650208, 0, 0, 0, 0.301997, 0, 0, 0, 0.123333, 0.514848, 1.44283, -1.13521)
 mesh = SubResource("13")
 
 [node name="Mag1" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(-0.0650208, 0, 1.07821e-08, 0, 0.301997, 0, -5.6843e-09, 0, -0.123333, -0.918, 1.507, -0.893)
+transform = Transform3D(0.0249652, 0, -0.11388, 0, 0.301997, 0, 0.060037, 0, 0.0473547, -0.279, 0.906, -0.38)
 mesh = SubResource("13")
 
 [node name="Mag2" type="MeshInstance3D" parent="Body"]
