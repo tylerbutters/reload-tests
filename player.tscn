@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://k3wr4geoleb7"]
+[gd_scene load_steps=31 format=3 uid="uid://k3wr4geoleb7"]
 
 [ext_resource type="Script" path="res://player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bsp41y1dapudg" path="res://grid_textures/PNG/Orange/texture_02.png" id="2"]
@@ -105,32 +105,32 @@ tracks/5/keys = {
 "values": [Vector3(0, 67.421, 0)]
 }
 
-[sub_resource type="Animation" id="25"]
-resource_name = "mag_3"
+[sub_resource type="Animation" id="17"]
+resource_name = "mag_1"
 length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Body/Mag3:position")
+tracks/0/path = NodePath("../Body/Mag1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0.285536, 0.905573, -0.36581), Vector3(0.286, 1.497, -0.366), Vector3(-0.741, 1.497, -0.67)]
+"values": [Vector3(-0.278873, 0.906, -0.380082), Vector3(-0.278873, 1.49721, -0.380082), Vector3(-0.741, 1.497, -0.67)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Body/Mag3:rotation_degrees")
+tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 67.421, 0), Vector3(0, 67.421, 0), Vector3(0, -23.622, 180)]
+"values": [Vector3(0, -67.421, 0), Vector3(0, -67.421, 0), Vector3(0, -23.622, 180)]
 }
 
 [sub_resource type="Animation" id="24"]
@@ -161,32 +161,32 @@ tracks/1/keys = {
 "values": [Vector3(0, -90, 0), Vector3(0, -90, 0), Vector3(0, -23.622, 180)]
 }
 
-[sub_resource type="Animation" id="17"]
-resource_name = "mag_1"
+[sub_resource type="Animation" id="25"]
+resource_name = "mag_3"
 length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Body/Mag1:position")
+tracks/0/path = NodePath("../Body/Mag3:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.278873, 0.906, -0.380082), Vector3(-0.278873, 1.49721, -0.380082), Vector3(-0.741, 1.497, -0.67)]
+"values": [Vector3(0.285536, 0.905573, -0.36581), Vector3(0.286, 1.497, -0.366), Vector3(-0.741, 1.497, -0.67)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Body/Mag1:rotation_degrees")
+tracks/1/path = NodePath("../Body/Mag3:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, -67.421, 0), Vector3(0, -67.421, 0), Vector3(0, -23.622, 180)]
+"values": [Vector3(0, 67.421, 0), Vector3(0, 67.421, 0), Vector3(0, -23.622, 180)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wwwib"]
@@ -497,110 +497,8 @@ tracks/6/keys = {
 "values": [Vector3(0, 67.421, 0)]
 }
 
-[sub_resource type="Animation" id="27"]
-resource_name = "insert_mag_2"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Body/Mag4:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.515, -2, -1.135)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Body/Mag4:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Body/Mag1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.279, 0.906, -0.38)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Body/Mag1:rotation_degrees")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -67.421, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Body/Mag3:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.285536, 0.905573, -0.36581)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Body/Mag3:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 67.421, 0)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Body/Mag2:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.741, 1.497, -0.67)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../Body/Mag2:rotation_degrees")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, -23.622, 180), Vector3(0, 0, 180)]
-}
-
-[sub_resource type="Animation" id="28"]
-resource_name = "insert_mag_3"
-
 [sub_resource type="Animation" id="Animation_ukuq2"]
-resource_name = "hold_mag"
+resource_name = "grab_mag"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -630,10 +528,8 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t43vk"]
 _data = {
 "RESET": SubResource("18"),
-"hold_mag": SubResource("Animation_ukuq2"),
-"insert_mag": SubResource("19"),
-"insert_mag_2": SubResource("27"),
-"insert_mag_3": SubResource("28")
+"grab_mag": SubResource("Animation_ukuq2"),
+"insert_mag": SubResource("19")
 }
 
 [sub_resource type="Animation" id="22"]
@@ -994,7 +890,7 @@ transform = Transform3D(0.0249652, 0, 0.11388, 0, 0.301997, 0, -0.060037, 0, 0.0
 mesh = SubResource("13")
 
 [node name="HoldMag" type="AnimationPlayer" parent="."]
-root_node = NodePath("")
+root_node = NodePath(".")
 libraries = {
 "": SubResource("AnimationLibrary_wwwib")
 }

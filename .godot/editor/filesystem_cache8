@@ -1,10 +1,10 @@
 2a60927148abd1d33b818b535e306557
-::res://::1680762979
-default_env.tres::Environment::3738276543972741128::1680762418::0::1::::<><>::
+::res://::1680769116
+default_env.tres::Environment::3738276543972741128::1680769116::0::1::::<><>::
 icon.png::CompressedTexture2D::7859095197013301065::1664924102::1680746463::1::::<><>::
-player.gd::GDScript::-1::1680762315::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::761058678478111114::1680762418::0::1::::<><>::res://player.gd<>uid://bsp41y1dapudg<>uid://c8hikpsuab6ck
-world.tscn::PackedScene::1703448558730064340::1680762418::0::1::::<><>::uid://k3wr4geoleb7<>uid://4c8cy6fcp0xk
+player.gd::GDScript::-1::1680769116::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::761058678478111114::1680769116::0::1::::<><>::res://player.gd<>uid://bsp41y1dapudg<>uid://c8hikpsuab6ck
+world.tscn::PackedScene::1703448558730064340::1680769116::0::1::::<><>::uid://k3wr4geoleb7<>uid://4c8cy6fcp0xk
 ::res://addons/::1664924115
 ::res://addons/godot-git-plugin/::1664924115
 plugin.cfg::TextFile::-1::1664924115::0::1::::<><>::
