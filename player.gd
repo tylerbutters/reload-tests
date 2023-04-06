@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 var mag_in_gun = true
 var mag_in_hand = false
+var isHoldingMag = false
 
 var speed = 7
 const ACCEL_DEFAULT = 7
@@ -22,7 +23,7 @@ var movement = Vector3()
 @onready var camera = $Head/Camera3D
 @onready var release_anim = $MagRelease
 @onready var grab_anim = $GrabMag
-@onready var swap_anim = $MagSwap
+#@onready var swap_anim = $MagSwap
 @onready var insert_anim = $InsertMag
 @onready var reset_anim = $Reset
 
@@ -69,10 +70,16 @@ func grab_mag_3_from_vest():
 	mag_in_hand = true
 
 func release_mag_from_gun():
-	if mag_in_gun:
-		release_anim.play("mag_release")
+	if mag_in_gun and !isHoldingMag:
+		print("start")
+		release_anim.play("drop_mag")
 		await release_anim.animation_finished
 		mag_in_gun = false
+		print('end')
+	elif isHoldingMag:
+		release_anim.play("swap_mags")
+		await release_anim.animation_finished
+		mag_in_gun = true
 	
 func insert_mag_in_gun():
 	if !mag_in_gun and mag_in_hand:
@@ -80,9 +87,9 @@ func insert_mag_in_gun():
 		await insert_anim.animation_finished
 		reset_anim.play("reset_all")
 	elif mag_in_gun and mag_in_hand:
-		swap_anim.play("swap_mag")
-		await swap_anim.animation_finished
-		reset_anim.play("reset_all")
+		insert_anim.play("hold_mag")
+		await insert_anim.animation_finished
+		isHoldingMag = true
 	mag_in_gun = true
 	mag_in_hand = false
 
