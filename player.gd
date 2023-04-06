@@ -25,10 +25,10 @@ var is_grabbing_gun_mag = false
 @onready var reset_anim = $Reset
 
 func _ready():
+	#$Timer.start()
 	#hides the cursor
 	reset_anim.play("reset_all")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 
 func _input(event):
 	#get mouse input for camera rotation
@@ -48,22 +48,30 @@ func dropMag():
 func swapMags():
 	mag_release_anim.play("swap_mags")
 	await mag_release_anim.animation_finished
-	reset_anim.play("reset_all")
-	gun_has_mag = true
-	is_holding_mag	= false
-	is_grabbing_gun_mag = false
+	resetState()
 	print("mags swapped")
 	
 	
 func insertMag():
 	insert_mag_anim.play("insert_mag")
 	await insert_mag_anim.animation_finished
+	resetState()
+	print("mag inserted")
+
+func resetState():
 	reset_anim.play("reset_all")
 	gun_has_mag = true
 	is_holding_mag = false
-	print("mag inserted")
-		
-		
+	is_grabbing_gun_mag = false
+	
+	
+func _on_timer_timeout():
+	print("gun_has_mag = ",gun_has_mag)
+	print("is_grabbing_gun_mag = ",is_grabbing_gun_mag)
+	print("is_holding_mag = ",is_holding_mag)
+	print("\n")
+	
+	
 func _process(delta):
 	if Input.is_action_just_pressed("MAG_RELEASE") and gun_has_mag and not is_grabbing_gun_mag:
 		dropMag()
